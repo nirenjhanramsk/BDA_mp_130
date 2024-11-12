@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Credit Card Fraud Detection</h2>
+        <form action="/predict" method="POST">
+            <input type="number" name="Time" placeholder="Time" required>
+            <input type="number" name="V1" placeholder="V1" required>
+            <input type="number" name="V2" placeholder="V2" required>
+            <input type="number" name="V3" placeholder="V3" required>
+            <input type="number" name="V4" placeholder="V4" required>
+            <input type="number" name="V5" placeholder="V5" required>
+            <input type="number" name="V6" placeholder="V6" required>
+            <input type="number" name="V7" placeholder="V7" required>
+            <input type="number" name="V8" placeholder="V8" required>
+            <input type="number" name="V9" placeholder="V9" required>
+            <input type="number" name="V10" placeholder="V10" required>
+            <input type="number" name="Amount" placeholder="Amount" required>
+            <button type="submit">Predict Fraud</button>
+        </form>
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
